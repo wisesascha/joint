@@ -7,7 +7,7 @@ MongoMapper and GridFS joined in file upload love.
 Declare the plugin and use the attachment method to make attachments.
 
   class Foo
-    include MongoMapper::Document
+    include Mongoid::Document
     plugin Joint
 
     attachment :image
@@ -34,4 +34,4 @@ If you call a method other than those in the proxy it calls it on the GridIO ins
 
 == Copyright
 
-Copyright (c) 2010 John Nunemaker. See LICENSE for details.
+Copyright (c) 2010 Sascha Wise. See LICENSE for details.

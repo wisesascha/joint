@@ -18,10 +18,10 @@ module Joint
       after_save     :destroy_nil_attachments
       before_destroy :destroy_all_attachments
 
-      key "#{name}_id".to_sym,   ObjectId
-      key "#{name}_name".to_sym, String
-      key "#{name}_size".to_sym, Integer
-      key "#{name}_type".to_sym, String
+      field "#{name}_id".to_sym,   ObjectId
+      field "#{name}_name".to_sym, String
+      field "#{name}_size".to_sym, Integer
+      field "#{name}_type".to_sym, String
 
       class_eval <<-EOC
         def #{name}
